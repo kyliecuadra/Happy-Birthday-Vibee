@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday, My Baby 💖</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <button id="musicToggle" class="music-toggle" aria-label="Toggle music">♪</button>
+
+  <div class="pixel-bg"></div>
+  <div id="confettiContainer"></div>
+
+  <section id="landing" class="section landing">
+    <div class="floating-decor">
+      <span>💖</span><span>✨</span><span>⭐</span><span>☁️</span>
+      <span>🌸</span><span>💜</span><span>🌷</span><span>✨</span>
+    </div>
+
+    <div class="hero-card">
+      <h1>Happy Birthday,<br>Vibee 💖</h1>
+      <p>A tiny pixel birthday adventure made just for you.</p>
+      <button class="pixel-btn" onclick="scrollToSection('intro')">Start Adventure</button>
+    </div>
+  </section>
+
+  <section id="intro" class="section">
+    <div class="pixel-frame">
+      <h2>Welcome, My Baby 🌷</h2>
+      <p>
+        Today is all about you. Your smile, your heart, your dreams,
+        and every little thing that makes you wonderfully you.
+      </p>
+
+      <div class="cute-row">
+        <div class="pixel-lily">🌸</div>
+        <div class="mini-cat">ฅ^•ﻌ•^ฅ</div>
+        <div class="pixel-lily">🌸</div>
+      </div>
+
+      <button class="pixel-btn" onclick="scrollToSection('gift')">Continue</button>
+    </div>
+  </section>
+
+  <section id="gift" class="section">
+    <h2>Open Your Pixel Gift 🎁</h2>
+    <p class="section-subtitle">Click the gift box for a tiny surprise.</p>
+
+    <div id="giftBox" class="gift-box" role="button" tabindex="0">
+      <div class="gift-lid"></div>
+      <div class="gift-body"></div>
+      <div class="gift-ribbon-v"></div>
+      <div class="gift-ribbon-h"></div>
+    </div>
+
+    <p id="giftMessage" class="hidden surprise-message">
+      Surprise! You are my favorite person in every universe 💖
+    </p>
+
+    <button class="pixel-btn" onclick="scrollToSection('cat')">Meet Pixel Cat</button>
+  </section>
+
+  <section id="cat" class="section">
+    <h2>Pixel Cat Says 🐱</h2>
+    <p class="section-subtitle">Click the cat for a random meme surprise.</p>
+
+    <div id="pixelCat" class="pixel-cat" role="button" tabindex="0">
+      <div class="cat-ear left"></div>
+      <div class="cat-ear right"></div>
+      <div class="cat-face">
+        <span class="cat-eye">●</span>
+        <span class="cat-mouth">ᴥ</span>
+        <span class="cat-eye">●</span>
+      </div>
+      <div class="cat-body"></div>
+    </div>
+
+    <p id="catMessage" class="meme-message">meow meow birthday mode activated 🎂</p>
+
+    <button class="pixel-btn" onclick="scrollToSection('reasons')">Next</button>
+  </section>
+
+  <section id="reasons" class="section">
+  <h2>Reasons Why I Love You 💗</h2>
+  <p class="section-subtitle">Tap each card 💖</p>
+
+  <div class="memory-grid">
+
+    <div class="memory-card">
+      <div class="card-inner">
+        <div class="card-front reason-front">💖</div>
+        <div class="card-back">You are strong</div>
+      </div>
+    </div>
+
+    <div class="memory-card">
+      <div class="card-inner">
+        <div class="card-front reason-front">💜</div>
+        <div class="card-back">You are responsible</div>
+      </div>
+    </div>
+
+    <div class="memory-card">
+      <div class="card-inner">
+        <div class="card-front reason-front">💖</div>
+        <div class="card-back">You are hardworking</div>
+      </div>
+    </div>
+
+    <div class="memory-card">
+      <div class="card-inner">
+        <div class="card-front reason-front">💜</div>
+        <div class="card-back">You are smart</div>
+      </div>
+    </div>
+
+    <div class="memory-card">
+      <div class="card-inner">
+        <div class="card-front reason-front">💖</div>
+        <div class="card-back">You are beautiful</div>
+      </div>
+    </div>
+
+    <div class="memory-card">
+      <div class="card-inner">
+        <div class="card-front reason-front">💜</div>
+        <div class="card-back">You are cute</div>
+      </div>
+    </div>
+
+    <div class="memory-card">
+      <div class="card-inner">
+        <div class="card-front reason-front">💖</div>
+        <div class="card-back">You are hot</div>
+      </div>
+    </div>
+
+    <div class="memory-card">
+      <div class="card-inner">
+        <div class="card-front reason-front">💜</div>
+        <div class="card-back">You are sexy</div>
+      </div>
+    </div>
+
+    <div class="memory-card">
+      <div class="card-inner">
+        <div class="card-front reason-front">💖</div>
+        <div class="card-back">You are perfect to me</div>
+      </div>
+    </div>
+
+    <div class="memory-card">
+      <div class="card-inner">
+        <div class="card-front reason-front">💜</div>
+        <div class="card-back">You make my world softer</div>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="pixel-btn" onclick="scrollToSection('memories')">
+    See Our Memories
+  </button>
+</section>
+
+    <section id="memories" class="section">
+  <h2>Our Online Memories 💌</h2>
+  <p class="section-subtitle">
+    Even if we have not met yet, every online moment with you is special.
+    Click each card to flip.
+  </p>
+
+  <div class="memory-grid">
+    <div class="memory-card">
+      <div class="card-inner">
+        <div class="card-front">Memory 01</div>
+        <div class="card-back">Every late-night chat that made me forget how tired I was.</div>
+      </div>
+    </div>
+
+    <div class="memory-card">
+      <div class="card-inner">
+        <div class="card-front">Memory 02</div>
+        <div class="card-back">The way your messages can instantly change my mood.</div>
+      </div>
+    </div>
+
+    <div class="memory-card">
+      <div class="card-inner">
+        <div class="card-front">Memory 03</div>
+        <div class="card-back">All the times we stayed up just to talk to each other.</div>
+      </div>
+    </div>
+
+    <div class="memory-card">
+      <div class="card-inner">
+        <div class="card-front">Memory 04</div>
+        <div class="card-back">Laughing together even though we are miles apart.</div>
+      </div>
+    </div>
+
+    <div class="memory-card">
+      <div class="card-inner">
+        <div class="card-front">Memory 05</div>
+        <div class="card-back">Every good morning and good night from you feels special.</div>
+      </div>
+    </div>
+
+    <div class="memory-card">
+      <div class="card-inner">
+        <div class="card-front">Memory 06</div>
+        <div class="card-back">Even without meeting yet, you already feel like home.</div>
+      </div>
+    </div>
+
+    <div class="memory-card">
+      <div class="card-inner">
+        <div class="card-front">Memory 07</div>
+        <div class="card-back">The random little updates from you that make me smile like crazy.</div>
+      </div>
+    </div>
+
+    <div class="memory-card">
+      <div class="card-inner">
+        <div class="card-front">Memory 08</div>
+        <div class="card-back">Every time I wait for your message because talking to you is my favorite part of the day.</div>
+      </div>
+    </div>
+
+    <div class="memory-card">
+      <div class="card-inner">
+        <div class="card-front">Memory 09</div>
+        <div class="card-back">The cute conversations that made the distance feel smaller.</div>
+      </div>
+    </div>
+
+    <div class="memory-card">
+      <div class="card-inner">
+        <div class="card-front">Memory 10</div>
+        <div class="card-back">The moments when your words made me feel calm, happy, and loved.</div>
+      </div>
+    </div>
+
+    <div class="memory-card">
+      <div class="card-inner">
+        <div class="card-front">Memory 11</div>
+        <div class="card-back">Every shared joke, cute tease, and silly message that became special to me.</div>
+      </div>
+    </div>
+
+    <div class="memory-card">
+      <div class="card-inner">
+        <div class="card-front">Memory 12</div>
+        <div class="card-back">Every photo and video you send me gives me butterflies in my stomach and makes me melt.</div>
+      </div>
+    </div>
+  </div>
+
+    <button class="pixel-btn" onclick="scrollToSection('message')">Read My Message</button>
+  </section>
+
+  <section id="message" class="section">
+    <h2>A Special Message For My Baby 💌</h2>
+
+    <button id="revealMessageBtn" class="pixel-btn">Reveal My Message 💌</button>
+
+    <div class="message-box">
+      <p id="typewriterText"></p>
+    </div>
+
+    <button class="pixel-btn" onclick="scrollToSection('download')">Final Gift</button>
+  </section>
+
+  <section id="download" class="section final-section">
+    <h2>I made this just for you 💖</h2>
+    <p class="section-subtitle">A little gift from my heart to yours.</p>
+
+    <a href="assets/vexel-art.png" download class="download-btn">
+      Download Your Gift 🎀
+    </a>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
