@@ -206,8 +206,14 @@ function typeWriter(text, index) {
 }
 
 /* Music Toggle */
+function startMusic() {
+    bgMusic.play().catch(err => console.log("Autoplay blocked:", err));
+    document.removeEventListener("click", startMusic);
+}
+
+document.addEventListener("click", startMusic);
 const musicToggle = document.getElementById("musicToggle");
-let musicPlaying = false;
+let musicPlaying = true;
 
 musicToggle.addEventListener("click", () => {
   musicPlaying = !musicPlaying;
