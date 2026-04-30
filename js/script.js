@@ -258,3 +258,60 @@ sparkleStyle.textContent = `
   }
 `;
 document.head.appendChild(sparkleStyle);
+
+const downloadGiftButton = document.getElementById("downloadGift");
+if (downloadGiftButton) {
+  downloadGiftButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    downloadImageWithCanvas("assets/vexel-art.png", "vexel-art.png");
+  });
+}
+
+function downloadImageWithCanvas(url, filename) {
+  const image = new Image();
+  image.onload = () => {
+    const canvas = document.createElement("canvas");
+    canvas.width = image.naturalWidth;
+    canvas.height = image.naturalHeight;
+    const ctx = canvas.getContext("2d");
+    ctx.drawImage(image, 0, 0);
+
+    canvas.toBlob((blob) => {
+      if (!blob) {
+        console.error("Failed to convert image to blob");
+        fallbackDownload(url, filename);
+        return;
+      }
+      downloadBlob(blob, filename);
+    }, "image/png");
+  };
+
+  image.onerror = () => {
+    console.error("Image load failed, using fallback download");
+    fallbackDownload(url, filename);
+  };
+
+  image.src = url;
+}
+
+function fallbackDownload(url, filename) {
+  const a = document.createElement("a");
+  a.style.display = "none";
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+}
+
+function downloadBlob(blob, filename) {
+  const blobUrl = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.style.display = "none";
+  a.href = blobUrl;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
+}
